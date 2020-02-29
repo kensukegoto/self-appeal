@@ -13,12 +13,12 @@ const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
 
 const srcStyle = {
-  in: "./sass/**/*.scss",
-  out: "../"
+  in: "../sass/**/*.scss",
+  out: "../../"
 };
 const srcScript = {
-  in: "./script/**/*.js",
-  out: "../"
+  in: "../script/**/*.js",
+  out: "../../"
 };
 
 function styles (mode){
