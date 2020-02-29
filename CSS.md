@@ -4,6 +4,10 @@ FLOCSSを採用
 
 ※適宜ルールを追加・変更
 
+参考
+
+- [[CSS設計] 私のためのFLOCSSまとめ](https://qiita.com/super-mana-chan/items/644c6827be954c8db2c0)
+
 # FLOCSS構成要素
 
 ## foundation
