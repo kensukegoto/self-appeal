@@ -8,6 +8,11 @@
       justify-content: center;
       align-items: center;
     }
+    &--between-center{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
   } @else {
 
     @include media($sz){
@@ -17,6 +22,11 @@
       &--center{
         display: flex;
         justify-content: center;
+        align-items: center;
+      }
+      &--between-center{
+        display: flex;
+        justify-content: space-between;
         align-items: center;
       }
     }
