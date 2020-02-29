@@ -3,7 +3,7 @@
 
   .c-humburger{
     @include media(l){
-      display: none;
+      display: none!important;
     }
   }
   &__modal{

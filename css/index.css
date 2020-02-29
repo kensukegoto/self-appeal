@@ -1196,7 +1196,7 @@ input, select {
 
 @media screen and (min-width: 960px) {
   .p-gnavi .c-humburger {
-    display: none;
+    display: none !important;
   }
   .u-mt0-l {
     margin-top: 0px;
