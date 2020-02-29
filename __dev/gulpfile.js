@@ -12,11 +12,20 @@ const webpackStream = require("webpack-stream");
 const webpack = require("webpack");
 const webpackConfig = require("./webpack.config");
 
+const srcStyle = {
+  in: "./sass/**/*.scss",
+  out: "../"
+};
+const srcScript = {
+  in: "./script/**/*.js",
+  out: "../"
+};
+
 function styles (mode){
 
   const outputStyle = (mode === "production") ? "compressed": "expanded";
   
-  return src(["./sass/**/*.scss"])
+  return src([srcStyle.in])
     .pipe(plumber({
       errorHandler: notify.onError("Error: <%= error.message %>")
     }))
@@ -27,7 +36,7 @@ function styles (mode){
         autoprefixer(),
         mqpacker()
     ]))
-    .pipe(dest("../css/"));
+    .pipe(dest(srcStyle.out));
 }
 
 function scripts(mode){
@@ -35,17 +44,17 @@ function scripts(mode){
       errorHandler: notify.onError("<%= error.message %>"),
     })
     .pipe(webpackStream(webpackConfig(mode), webpack))
-    .pipe(dest("../"))
+    .pipe(dest(srcScript.out))
 }
 
 exports.default = parallel(
   () => {
-    watch(["./sass/**/*.scss"],()=>{
+    watch([srcStyle.in],()=>{
       return styles();
     })
   },
   () => {
-    watch(["./script/**/*.js"], ()=>{
+    watch([srcScript.in], ()=>{
       return scripts();
     })
   },
