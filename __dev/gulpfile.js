@@ -27,7 +27,7 @@ function styles (mode){
         autoprefixer(),
         mqpacker()
     ]))
-    .pipe(dest("../"));
+    .pipe(dest("../css/"));
 }
 
 function scripts(mode){
