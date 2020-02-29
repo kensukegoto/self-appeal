@@ -11,3 +11,25 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin space ($prop,$position,$tick:4,$num:10)  {
+  
+  @for $i from 0 to $num {
+
+    &#{$i * $tick}{
+  
+      #{$prop}-#{$position}: $tick * $i + px;
+  
+      $szList: map-keys($breakpoints);
+  
+      @each $sz in $szList {
+  
+        @include media($sz){
+          &-#{$sz}{
+            #{$prop}-#{$position}: $tick * $i + px;
+          }
+        }
+      }
+    }
+  }
+}
