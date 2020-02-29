@@ -1,4 +1,4 @@
-const gulp = require("gulp");
+const { src, dest, watch, parallel } = require("gulp");
 // sass
 const sass = require("gulp-dart-sass");
 const notify = require("gulp-notify");
@@ -14,51 +14,48 @@ const webpackConfig = require("./webpack.config");
 
 function styles (mode){
 
-    const outputStyle = (mode === "production") ? "compressed": "expanded";
-    
-    return gulp
-        .src(["./sass/**/*.scss"])
-        .pipe(plumber({
-            errorHandler: notify.onError("Error: <%= error.message %>")
-        }))
-        .pipe(sass({
-            outputStyle: outputStyle
-        }))
-        .pipe(postcss([
-            autoprefixer(),
-            mqpacker()
-        ]))
-        .pipe(gulp.dest("../"));
+  const outputStyle = (mode === "production") ? "compressed": "expanded";
+  
+  return src(["./sass/**/*.scss"])
+    .pipe(plumber({
+      errorHandler: notify.onError("Error: <%= error.message %>")
+    }))
+    .pipe(sass({
+      outputStyle: outputStyle
+    }))
+    .pipe(postcss([
+        autoprefixer(),
+        mqpacker()
+    ]))
+    .pipe(dest("../"));
 }
 
 function scripts(mode){
-      return plumber({
-          errorHandler: notify.onError("<%= error.message %>"),
-        }).pipe(webpackStream(webpackConfig(mode), webpack))
-        .pipe(gulp.dest("../"))
+  return plumber({
+      errorHandler: notify.onError("<%= error.message %>"),
+    })
+    .pipe(webpackStream(webpackConfig(mode), webpack))
+    .pipe(dest("../"))
 }
 
-
-gulp.task("default",gulp.parallel(
-    () => {
-      gulp.watch(["./sass/**/*.scss"],()=>{
-        return styles();
-      })
-    },
-    () => {
-      gulp.watch(["./script/**/*.js"], ()=>{
-        return scripts();
-      })
-    },
-  )
+exports.default = parallel(
+  () => {
+    watch(["./sass/**/*.scss"],()=>{
+      return styles();
+    })
+  },
+  () => {
+    watch(["./script/**/*.js"], ()=>{
+      return scripts();
+    })
+  },
 );
 
-gulp.task("production",gulp.parallel(
-    () => {
-        return styles("production");
-    },
-    () => {
-        return scripts("production");
-    },
-  )
+exports.production = parallel(
+  () => {
+    return styles("production");
+  },
+  () => {
+    return scripts("production");
+  },
 );
