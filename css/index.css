@@ -119,6 +119,11 @@ input, select {
   justify-content: center;
   align-items: center;
 }
+.c-flex--between-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .c-humburger {
   position: relative;
@@ -155,6 +160,15 @@ input, select {
 }
 .c-humburger.is-open span:nth-child(3) {
   transform: rotate(-45deg) translate3d(0, -100%, 0);
+}
+
+.p-title b {
+  font-size: 20px;
+  font-weight: bold;
+}
+.p-title span {
+  margin-left: 6px;
+  font-size: 10px;
 }
 .p-gnavi__modal {
   display: none;
@@ -664,6 +678,11 @@ input, select {
 .u-pr38 {
   margin-right: 38px;
 }
+
+.u-border-btm--primary {
+  border-bottom: 5px solid #f9f038;
+}
+
 @media screen and (min-width: 601px) {
   .c-flex-m {
     display: flex;
@@ -671,6 +690,11 @@ input, select {
   .c-flex-m--center {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
+  .c-flex-m--between-center {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
   }
   .u-mt0-m {
@@ -1170,6 +1194,7 @@ input, select {
     margin-right: 38px;
   }
 }
+
 @media screen and (min-width: 960px) {
   .p-gnavi .c-humburger {
     display: none;
@@ -1671,6 +1696,7 @@ input, select {
     margin-right: 38px;
   }
 }
+
 @media screen and (max-width: 374px) {
   .u-mt0-xs {
     margin-top: 0px;
@@ -2169,6 +2195,7 @@ input, select {
     margin-right: 38px;
   }
 }
+
 @media screen and (max-width: 600px) {
   .u-mt0-s {
     margin-top: 0px;
