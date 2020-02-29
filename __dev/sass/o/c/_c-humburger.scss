@@ -16,9 +16,6 @@
     background-color: #333;
     transition: transform .3s,opacity .3s;
 
-    &:nth-child(1){
-      transform-origin: left;
-    }
 
     &:nth-child(2){
       top: 50%;
@@ -35,7 +32,8 @@
 
     span{
       &:nth-child(1){
-        transform: rotate(45deg);
+        top: 50%;
+        transform: translate3d(0, -50%, 0) rotate(45deg);
       }
 
       &:nth-child(2){
@@ -43,7 +41,8 @@
       }
   
       &:nth-child(3){
-        transform: rotate(-45deg) translate3d(0,-100%,0);
+        top: 50%;
+        transform: translate3d(0, -50%, 0) rotate(-45deg);
       }
     }
 
