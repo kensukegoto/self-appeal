@@ -1,29 +1,28 @@
 // Foundation
-@import "f/reset";
-@import "f/mixin";
-@import "f/base";
+@import "foundation/reset";
+@import "foundation/mixin";
+@import "foundation/base";
 
-// Layout
-@import "l/l-header";
-@import "l/l-main";
-@import "l/l-section";
-@import "l/l-footer";
+// Block 
+// ヘッダー・フッターなど
+@import "block/b-header";
 
-// Component
-@import "o/c/c-heading";
-@import "o/c/c-text";
-@import "o/c/c-row";
-@import "o/c/c-flex";
-@import "o/c/c-humburger";
-
-// Project
-@import "o/p/p-title";
-@import "o/p/p-gnavi";
+// Element 
+// これ以上分解不可
 
 
-// utilities
-@import "o/u/u-color";
-@import "o/u/u-fontsize";
-@import "o/u/u-margin";
-@import "o/u/u-padding";
-@import "o/u/u-border";
+// Component 
+// HTMLを内包 Elementの集まり
+@import "component/c-humburger";
+@import "component/c-title";
+
+// Module 
+// ComponentやElementの集まり
+@import "module/m-gnavi.scss";
+
+// utility
+@import "utility/u-color";
+@import "utility/u-fontsize";
+@import "utility/u-margin";
+@import "utility/u-padding";
+@import "utility/u-border";

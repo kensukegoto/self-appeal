@@ -25,6 +25,7 @@ time, mark, audio, video {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
+  box-sizing: border-box;
 }
 
 body {
@@ -56,6 +57,8 @@ a {
   font-size:100%;
   vertical-align:baseline;
   background:transparent;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* change colours to suit your needs */

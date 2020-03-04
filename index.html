@@ -7,21 +7,33 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <header class="l-header c-flex--between-center u-border-btm--primary">
-    <h1 class="p-title c-flex--center"><b>後藤謙介</b><span>エモーショナル系エンジニア</span>
+  <header class="b-header">
+    <h1 class="c-title"><b>後藤謙介</b><span>エモーショナル系エンジニア</span>
     </h1>
-    <nav class="p-gnavi">
+    <nav class="m-gnavi">
       <a class="c-humburger"><span></span><span></span><span></span></a>
-      <div class="p-gnavi__modal">
-        <ul class="p-gnavi__modal__menu c-flex-m--center">
-          <li><a href="">トップ</a></li>
-          <li><a href="">何が出来るの？</a></li>
-          <li><a href="">どんな人？</a></li>
-          <li><a href="">最近の活動</a></li>
-          <li><a href="">お問い合わせ</a></li>
-        </ul>
+      <div class="m-gnavi__lists">
+        <nav class="m-gnavi__lists__inner">
+          <ul>
+            <li><a href="">トップ</a></li>
+            <li><a href="">何が出来るの？</a></li>
+            <li><a href="">どんな人？</a></li>
+            <li><a href="">最近の活動</a></li>
+            <li><a href="">お問い合わせ</a></li>
+          </ul>
+        </nav>
       </div>
     </nav>
   </header>
+  <script>
+
+    setTimeout(()=>{
+      return;
+      const btn = document.querySelector(".c-humburger");
+      const modal = document.querySelector(".m-gnavi__lists");
+      btn.classList.add("on-modal");
+      modal.classList.add("on-modal");
+    },1000)
+  </script>
 </body>
 </html>

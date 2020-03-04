@@ -1,11 +1,9 @@
 $breakpoints: (
-  'xs': 'screen and (max-width: 374px)',
-  's' : 'screen and (max-width: 600px)',
-  'm' : 'screen and (min-width: 601px)',
+  'm' : 'screen and (min-width: 560px)',
   'l' : 'screen and (min-width: 960px)',
 ) !default;
 
-@mixin media($breakpoint: m) {
+@mixin media($breakpoint: l) {
   @media #{map-get($breakpoints,$breakpoint)}{
     @content;
   }
@@ -31,4 +29,17 @@ $breakpoints: (
       }
     }
   }
+}
+
+$color: (
+  accent: #f9f038
+);
+@function color($color) {
+  $colors:(
+
+      accent: #f9f038,
+
+  ) !default;
+
+  @return map-get($colors,$color);
 }
