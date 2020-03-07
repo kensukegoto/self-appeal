@@ -17,7 +17,8 @@
     }
     
     &__lists{
-  
+      
+      opacity: 0;
       transform: translateY(-100%);
       position: absolute;
       top: 60px;
@@ -30,7 +31,7 @@
   
       // オープン：メニューを表示
       #{$root}.is-open &{ 
-  
+        opacity: 1;
         transform: translateY(0%);
 
       }

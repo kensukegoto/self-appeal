@@ -1233,6 +1233,7 @@ body {
     width: 100vw;
   }
   .m-gnavi__lists {
+    opacity: 0;
     transform: translateY(-100%);
     position: absolute;
     top: 60px;
@@ -1244,6 +1245,7 @@ body {
     text-align: center;
   }
   .m-gnavi.is-open .m-gnavi__lists {
+    opacity: 1;
     transform: translateY(0%);
   }
   .m-gnavi__lists li {
