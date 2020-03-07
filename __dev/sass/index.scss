@@ -7,6 +7,7 @@
 // ヘッダー・フッターなど
 @import "block/b-header";
 @import "block/b-mv";
+@import "block/b-skill";
 
 // Element 
 // これ以上分解不可
@@ -19,11 +20,14 @@
 @import "component/c-copy";
 @import "component/c-man";
 @import "component/c-cloud";
+@import "component/c-heading";
+@import "component/c-skill";
 
 // Module 
 // ComponentやElementの集まり
 @import "module/m-gnavi--sp.scss";
 @import "module/m-gnavi--pc.scss";
+@import "module/m-skills.scss";
 
 // utility
 @import "utility/u-fontsize";
