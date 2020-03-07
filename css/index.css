@@ -687,6 +687,42 @@ body {
   .c-humburger {
     display: none !important;
   }
+  .m-gnavi__lists__content {
+    display: flex;
+  }
+  .m-gnavi__lists__content .item {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-right: 60px;
+    position: relative;
+    transition: color 0.1s;
+  }
+  .m-gnavi__lists__content .item:hover {
+    color: #cc0000;
+  }
+  .m-gnavi__lists__content .item:last-child {
+    margin-right: 16px;
+  }
+  .m-gnavi__lists__content .item::before {
+    content: "";
+    display: block;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    position: absolute;
+    transform: translate(-100%, -50%);
+    top: 50%;
+    left: -8px;
+    background-color: #fff;
+    transition: background-color 0.1s;
+  }
+  .m-gnavi__lists__content .item.is-active::before {
+    background-color: #f9f038;
+  }
+
+  .m-gnavi__lists__content .item:hover::before {
+    background-color: #cc0000;
+  }
   .u-mt0-l {
     margin-top: 0px;
   }

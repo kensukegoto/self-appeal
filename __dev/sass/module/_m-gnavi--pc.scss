@@ -1,0 +1,50 @@
+@include media(l){
+
+  .m-gnavi__lists__content{
+
+    display: flex;
+
+    .item{
+      $item: &;
+      font-size: 1.6rem;
+      font-weight: bold;
+      margin-right: 60px;
+      position: relative;
+      transition: color .1s;
+
+      &:hover{
+        color: color(accent2);
+      }
+
+      &:last-child{
+        margin-right: 16px;
+      }
+
+      &::before{
+        $before: &;
+        content: "";
+        display: block;
+        height: 16px;
+        width: 16px;
+        border-radius: 50%;
+        position: absolute;
+        transform: translate(-100%,-50%);
+        top: 50%;
+        left: -8px;
+        background-color: color(wh);
+        transition: background-color .1s;
+
+        @at-root #{$item}.is-active::before{
+          background-color: color(accent);
+        }
+
+        @at-root #{$item}:hover::before{
+          background-color: color(accent2);
+        }
+
+      }
+    
+    }
+  }
+
+}
