@@ -11,6 +11,7 @@
     margin-right: 16px;
     margin-left: 16px;
     padding: 0 8px;
+    padding-bottom: 20px;
     background-color: color(base);
     @include media(l){
       width: 960px;
@@ -18,6 +19,7 @@
       margin-left: auto;
       margin-right: auto;
       padding: 0 16px;
+      padding-bottom: 24px;
     }
   }
 

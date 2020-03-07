@@ -1,8 +1,8 @@
 .m-skills{
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 
   .c-skill{
 
@@ -16,7 +16,7 @@
       }
     }
     @include media(l){
-      margin-top: 28px;
+      margin-top: 24px;
     }
   
   }
