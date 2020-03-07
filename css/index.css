@@ -1202,7 +1202,7 @@ body {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: red;
+    background-color: #fff;
     transition: transform 0.3s;
     z-index: -1;
   }

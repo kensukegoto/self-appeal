@@ -33,13 +33,14 @@ $breakpoints: (
   }
 }
 
-$color: (
-  accent: #f9f038
-);
+
 @function color($color) {
   $colors:(
 
-      accent: #f9f038,
+    wh: #fff,
+    bk0: #000,
+    bk3: #333,
+    accent: #f9f038,
 
   ) !default;
 
