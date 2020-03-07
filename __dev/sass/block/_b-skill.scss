@@ -1,0 +1,17 @@
+.b-skill{
+  background-color: color(main);
+  padding-top: 24px;
+
+  @include media(l){
+    padding-top: 32px;
+  }
+
+  &__inner{
+    margin-top: 20px;
+    background-color: color(base);
+    @include media(l){
+      margin-top: 32px;
+    }
+  }
+
+}
