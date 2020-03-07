@@ -1,16 +1,32 @@
 .c-skill{
+
   width: calc(50% - 8px);
   text-align: center;
+  margin-top: 20px;
+
   &__num{
     @include number;
     margin: 0 auto;
-    font-size: 1.6rem;
-    width: 32px;
-    height: 32px;
+    font-size: 1.8rem;
+    font-style: italic;
+    width: 36px;
+    height: 36px;
     display: flex;
     background-color: color(accent);
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+  }
+  &__txt{
+    b{
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+    margin-top: 8px;
+
+    span{
+      margin-top: 8px;
+      display: block;
+    }
   }
 }
