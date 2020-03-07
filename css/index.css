@@ -129,6 +129,72 @@ body {
   background-color: #fff;
 }
 
+.b-mv__inner {
+  margin-top: 60px;
+  height: 224px;
+  position: relative;
+}
+.b-mv__copy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 16px;
+  z-index: 3;
+  background-color: #fff;
+}
+.b-mv__copy p {
+  padding: 0.375em 14px;
+  margin: 3px;
+  position: relative;
+  background-color: #fff;
+  font-size: 2rem;
+  line-height: 1.75;
+  font-weight: bold;
+  text-align: center;
+}
+.b-mv__copy p::before, .b-mv__copy p::after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-color: #aaa;
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  z-index: -1;
+}
+.b-mv__copy p::after {
+  top: auto;
+  left: auto;
+  bottom: -3px;
+  right: -3px;
+}
+.b-mv__copy p span {
+  display: inline-block;
+  text-align: left;
+}
+.b-mv__cloud {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.b-mv__cloud img {
+  max-height: 100%;
+}
+.b-mv__man {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90%;
+  z-index: 2;
+}
+.b-mv__man img {
+  max-height: 100%;
+}
+
 .c-humburger {
   position: relative;
   display: block;
