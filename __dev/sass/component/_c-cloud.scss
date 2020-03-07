@@ -1,0 +1,16 @@
+.c-cloud{
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100%;
+  z-index: 1;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+  @include media(l){
+    left: 300px;
+    width: 100%;
+    transform: translateY(-50%);
+  }
+
+}
