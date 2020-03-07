@@ -1,33 +1,44 @@
 .m-gnavi {
   
+  // &__lists{
+
+  //   @include media(u-l){
+  //     transform: translateY(-100%);
+  //     .is-open &{
+  //       position: absolute;
+  //       top: 60px;
+  //       left: 0;
+  //       width: 100%;
+  //       background-color: red;
+  //       transform: translateY(0%);
+  //     }
+  //   }
+
+  // }
+
+}
+
+.m-gnavi{
+
+  $root: &;
+  
   &__lists{
-    display: none;
-    position: fixed;
-    top: 0;
+
+    transform: translateY(-100%);
+    position: absolute;
+    top: 60px;
     left: 0;
     width: 100%;
-    height: 100%;
+    background-color: red;
+    transition: transform .3s;
     z-index: -1;
 
-    &.on-modal{
-      display: block;
+    #{$root}.is-open &{ 
+
+      @include media(u-l){
+        transform: translateY(0%);
+      }
     }
-
-    &__inner{
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: #fff;
-      background-color: rgba(0,0,0,.8);
-    }
-
-    
-
   }
-
+  
 }
