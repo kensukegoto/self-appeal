@@ -2305,9 +2305,13 @@ body {
   body {
     font-size: 1.6em;
   }
+  .b-header {
+    height: 80px;
+  }
   .b-mv__inner {
     width: 960px;
     height: 616px;
+    margin-top: 80px;
     margin-right: auto;
     margin-left: auto;
   }
