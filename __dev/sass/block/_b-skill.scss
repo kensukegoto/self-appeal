@@ -8,6 +8,8 @@
 
   &__inner{
     margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
     background-color: color(base);
     @include media(l){
       margin-top: 32px;
