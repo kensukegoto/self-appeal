@@ -2,13 +2,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 8px;
+
 
   .c-skill{
 
     width: calc(50% - 4px);
     text-align: center;
     margin-top: 20px;
+    @include media(m){
+      width: calc(33% - (16px * 2)/3);
+      &::last-child{
+        width: calc(34% - (16px * 2)/3);
+      }
+    }
+    @include media(l){
+      margin-top: 28px;
+    }
   
   }
 }

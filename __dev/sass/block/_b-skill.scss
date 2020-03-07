@@ -10,9 +10,14 @@
     margin-top: 20px;
     margin-right: 16px;
     margin-left: 16px;
+    padding: 0 8px;
     background-color: color(base);
     @include media(l){
+      width: 960px;
       margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 16px;
     }
   }
 

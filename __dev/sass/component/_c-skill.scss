@@ -1,5 +1,5 @@
 .c-skill{
-  
+
   &__num{
     @include number;
     margin: 0 auto;
@@ -12,17 +12,34 @@
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    @include media(l){
+      font-size: 3.2rem;
+      width: 40px;
+      height: 40px;
+    }
   }
   &__txt{
+
+    margin-top: 8px;
+    @include media(l){
+      margin-top: 16px;
+    }
     b{
       font-size: 1.8rem;
       font-weight: bold;
+      @include media(l){
+        font-size: 2.4rem;
+      }
     }
-    margin-top: 8px;
 
     span{
       margin-top: 8px;
       display: block;
+      line-height: 1.75;
+      @include media(l){
+        margin-top: 16px;
+        font-size: 1.6rem;
+      }
     }
   }
 }

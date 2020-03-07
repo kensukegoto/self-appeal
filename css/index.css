@@ -149,6 +149,7 @@ body {
   margin-top: 20px;
   margin-right: 16px;
   margin-left: 16px;
+  padding: 0 8px;
   background-color: #fff;
 }
 
@@ -302,12 +303,12 @@ body {
 .c-skill__txt span {
   margin-top: 8px;
   display: block;
+  line-height: 1.75;
 }
 .m-skills {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 8px;
 }
 .m-skills .c-skill {
   width: calc(50% - 4px);
@@ -1340,6 +1341,12 @@ body {
   }
   .c-man {
     right: 10%;
+  }
+  .m-skills .c-skill {
+    width: calc(33% - (16px * 2)/3);
+  }
+  .m-skills .c-skill::last-child {
+    width: calc(34% - (16px * 2)/3);
   }
   .u-mt0-m {
     margin-top: 0px;
@@ -2391,7 +2398,11 @@ body {
     padding-top: 32px;
   }
   .b-skill__inner {
+    width: 960px;
     margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 16px;
   }
   .c-humburger {
     display: none !important;
@@ -2431,6 +2442,21 @@ body {
     margin-top: 16px;
     font-size: 4rem;
   }
+  .c-skill__num {
+    font-size: 3.2rem;
+    width: 40px;
+    height: 40px;
+  }
+  .c-skill__txt {
+    margin-top: 16px;
+  }
+  .c-skill__txt b {
+    font-size: 2.4rem;
+  }
+  .c-skill__txt span {
+    margin-top: 16px;
+    font-size: 1.6rem;
+  }
   .m-gnavi__lists__content {
     display: flex;
   }
@@ -2466,6 +2492,9 @@ body {
 
   .m-gnavi__lists__content .item:hover::before {
     background-color: #cc0000;
+  }
+  .m-skills .c-skill {
+    margin-top: 28px;
   }
   .u-mt0-l {
     margin-top: 0px;
