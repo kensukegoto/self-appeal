@@ -1,0 +1,20 @@
+.b-profile{
+  padding-top: 24px;
+  padding-bottom: 48px;
+  @include media(l){
+    padding-top: 32px;
+  }
+
+  &__inner{
+    margin-top: 20px;
+    margin-right: 16px;
+    margin-left: 16px;
+    @include media(l){
+      width: 960px;
+      margin-top: 32px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+.c-profile-list{
+
+  margin-top: 16px;
+  @include media(m){
+    margin-top: 0;
+  }
+
+  dt{
+    margin-top: 16px;
+    font-weight: bold;
+    font-size: 1.8rem;
+    &:first-child{
+      margin-top: 0;
+    }
+
+    @include media(l){
+      margin-top: 32px;
+      font-size: 2rem;
+    }
+  }
+  dd{
+    margin-top: 8px;
+    line-height: 1.75;
+    @include media(l){
+      margin-top: 16px;
+    }
+  }
+}

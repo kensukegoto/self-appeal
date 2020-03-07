@@ -158,6 +158,16 @@ body {
   z-index: 0;
 }
 
+.b-profile {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+.b-profile__inner {
+  margin-top: 20px;
+  margin-right: 16px;
+  margin-left: 16px;
+}
+
 .c-humburger {
   position: relative;
   display: block;
@@ -320,6 +330,42 @@ body {
 }
 .c-gear img {
   width: 100%;
+}
+
+.c-profile-img {
+  padding-top: 8px;
+  padding-left: 8px;
+  position: relative;
+}
+.c-profile-img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(100% - 8px);
+  padding-bottom: calc(118% - 8px);
+  background-color: #f9f038;
+  z-index: -1;
+}
+.c-profile-img img {
+  width: 100%;
+}
+
+.c-profile-list {
+  margin-top: 16px;
+}
+.c-profile-list dt {
+  margin-top: 16px;
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+.c-profile-list dt:first-child {
+  margin-top: 0;
+}
+.c-profile-list dd {
+  margin-top: 8px;
+  line-height: 1.75;
 }
 .m-skills {
   display: flex;
@@ -1363,11 +1409,24 @@ body {
     bottom: 28px;
     right: 16px;
   }
+  .c-profile-list {
+    margin-top: 0;
+  }
   .m-skills .c-skill {
     width: calc(33% - (16px * 2)/3);
   }
   .m-skills .c-skill:nth-child(3n) {
     width: calc(34% - (16px * 2)/3);
+  }
+  .m-profile {
+    display: flex;
+    justify-content: space-between;
+  }
+  .m-profile .c-profile-img {
+    width: calc(40% - 16px);
+  }
+  .m-profile .c-profile-list {
+    width: calc(100% - 40%);
   }
   .u-mt0-m {
     margin-top: 0px;
@@ -2426,6 +2485,15 @@ body {
     padding: 0 16px;
     padding-bottom: 24px;
   }
+  .b-profile {
+    padding-top: 32px;
+  }
+  .b-profile__inner {
+    width: 960px;
+    margin-top: 32px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .c-humburger {
     display: none !important;
   }
@@ -2479,6 +2547,21 @@ body {
     margin-top: 16px;
     font-size: 1.6rem;
   }
+  .c-profile-img {
+    padding-top: 16px;
+    padding-left: 16px;
+  }
+  .c-profile-img::before {
+    width: calc(100% - 16px);
+    padding-bottom: calc(118% - 16px);
+  }
+  .c-profile-list dt {
+    margin-top: 32px;
+    font-size: 2rem;
+  }
+  .c-profile-list dd {
+    margin-top: 16px;
+  }
   .m-gnavi__lists__content {
     display: flex;
   }
@@ -2517,6 +2600,17 @@ body {
   }
   .m-skills .c-skill {
     margin-top: 24px;
+  }
+  .m-profile {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .m-profile .c-profile-img {
+    width: calc(31.25% - 36px);
+  }
+  .m-profile .c-profile-list {
+    width: calc(100% - 31.25%);
   }
   .u-mt0-l {
     margin-top: 0px;

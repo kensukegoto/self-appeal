@@ -8,6 +8,7 @@
 @import "block/b-header";
 @import "block/b-mv";
 @import "block/b-skill";
+@import "block/b-profile";
 
 // Element 
 // これ以上分解不可
@@ -23,12 +24,15 @@
 @import "component/c-heading";
 @import "component/c-skill";
 @import "component/c-gear";
+@import "component/c-profile-img";
+@import "component/c-profile-list";
 
 // Module 
 // ComponentやElementの集まり
 @import "module/m-gnavi--sp.scss";
 @import "module/m-gnavi--pc.scss";
 @import "module/m-skills.scss";
+@import "module/m-profile.scss";
 
 // utility
 @import "utility/u-fontsize";
