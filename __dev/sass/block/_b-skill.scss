@@ -13,6 +13,8 @@
     padding: 0 8px;
     padding-bottom: 20px;
     background-color: color(base);
+    position: relative;
+    z-index: 0;
     @include media(l){
       width: 960px;
       margin-top: 32px;

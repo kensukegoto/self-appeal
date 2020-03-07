@@ -153,6 +153,8 @@ body {
   padding: 0 8px;
   padding-bottom: 20px;
   background-color: #fff;
+  position: relative;
+  z-index: 0;
 }
 
 .c-humburger {
@@ -306,6 +308,16 @@ body {
   margin-top: 8px;
   display: block;
   line-height: 1.75;
+}
+
+.c-gear {
+  position: absolute;
+  bottom: 20px;
+  right: 8px;
+  z-index: -1;
+}
+.c-gear img {
+  width: 100%;
 }
 .m-skills {
   display: flex;
@@ -1343,6 +1355,11 @@ body {
   }
   .c-man {
     right: 10%;
+  }
+  .c-gear {
+    width: 33%;
+    bottom: 28px;
+    right: 16px;
   }
   .m-skills .c-skill {
     width: calc(33% - (16px * 2)/3);
