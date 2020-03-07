@@ -1345,7 +1345,7 @@ body {
   .m-skills .c-skill {
     width: calc(33% - (16px * 2)/3);
   }
-  .m-skills .c-skill::last-child {
+  .m-skills .c-skill:nth-child(3n) {
     width: calc(34% - (16px * 2)/3);
   }
   .u-mt0-m {
