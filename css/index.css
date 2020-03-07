@@ -278,20 +278,16 @@ body {
   text-align: center;
 }
 .c-skill__num {
+  font-family: "Martel", serif;
+  margin: 0 auto;
   font-size: 1.6rem;
-  position: relative;
-}
-.c-skill__num::before {
-  content: "";
   width: 32px;
   height: 32px;
-  display: block;
+  display: flex;
   background-color: #f9f038;
   border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
 }
 .m-skills {
   display: flex;
