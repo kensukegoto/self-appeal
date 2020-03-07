@@ -136,6 +136,9 @@ body {
   background-color: #fff;
 }
 
+.b-mv {
+  overflow: hidden;
+}
 .b-mv__inner {
   margin-top: 60px;
   height: 224px;
