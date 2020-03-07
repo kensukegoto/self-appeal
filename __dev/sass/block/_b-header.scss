@@ -4,6 +4,7 @@
   left: 0;
   height: 60px;
   width: 100%;
+  z-index: 10;
   @include media(l){
     height: 80px;
   }
