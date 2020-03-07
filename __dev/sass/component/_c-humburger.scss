@@ -21,35 +21,29 @@
     transition: transform .3s,opacity .3s,background-color .3s;
 
 
+    &:nth-child(1){
+      .is-open & {
+        top: 50%;
+        background-color: #fff;
+        transform: translate3d(0, -50%, 0) rotate(45deg);
+      }
+    }
+
     &:nth-child(2){
       top: 50%;
       transform: translate3d(0,-50%,0);
+      .is-open & {
+        opacity: 0;
+      }
     }
 
     &:nth-child(3){
       top: 100%;
       transform: translate3d(0,-100%,0);
-    }
-  }
-
-  &.on-modal{
-
-    span{
-      &:nth-child(1){
-        top: 50%;
-        background-color: #fff;
-        transform: translate3d(0, -50%, 0) rotate(45deg);
-      }
-
-      &:nth-child(2){
-        opacity: 0;
-      }
-  
-      &:nth-child(3){
+      .is-open & {
         top: 50%;
         transform: translate3d(0, -50%, 0) rotate(-45deg);
         background-color: #fff;
-
       }
     }
   }
