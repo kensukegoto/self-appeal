@@ -5,6 +5,7 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Noto+Sans+JP:400,700&display=swap");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -105,6 +106,7 @@ input, select {
 
 html {
   font-size: 62.5%;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 body {
