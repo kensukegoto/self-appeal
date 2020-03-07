@@ -4,6 +4,7 @@
 
     $root: &;
 
+    // オープン：モーダルの背景
     &.is-open::before{
       content: "";
       position: fixed;
@@ -25,12 +26,22 @@
       background-color: color(wh);
       transition: transform .3s;
       z-index: -1;
+      text-align: center;
   
+      // オープン：メニューを表示
       #{$root}.is-open &{ 
   
         transform: translateY(0%);
 
       }
+
+      li{
+        margin-top: 2em;
+        &:last-child{
+          margin-bottom: 2em;
+        }
+      }
+
     }
     
   }

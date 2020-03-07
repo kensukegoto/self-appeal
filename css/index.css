@@ -1205,9 +1205,16 @@ body {
     background-color: #fff;
     transition: transform 0.3s;
     z-index: -1;
+    text-align: center;
   }
   .m-gnavi.is-open .m-gnavi__lists {
     transform: translateY(0%);
+  }
+  .m-gnavi__lists li {
+    margin-top: 2em;
+  }
+  .m-gnavi__lists li:last-child {
+    margin-bottom: 2em;
   }
   .u-mt0-u-l {
     margin-top: 0px;
