@@ -174,18 +174,6 @@ body {
   margin-left: 6px;
   font-size: 10px;
 }
-
-.m-gnavi__lists {
-  transform: translateY(-100%);
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: red;
-  transition: transform 0.3s;
-  z-index: -1;
-}
-
 .u-mt0 {
   margin-top: 0px;
 }
@@ -1198,6 +1186,26 @@ body {
 }
 
 @media screen and (max-width: 959px) {
+  .m-gnavi.is-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+  }
+  .m-gnavi__lists {
+    transform: translateY(-100%);
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: red;
+    transition: transform 0.3s;
+    z-index: -1;
+  }
   .m-gnavi.is-open .m-gnavi__lists {
     transform: translateY(0%);
   }

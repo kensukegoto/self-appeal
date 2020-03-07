@@ -1,44 +1,38 @@
-.m-gnavi {
+@include media(u-l){
+
+  .m-gnavi{
+
+    $root: &;
+
+    &.is-open::before{
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background-color: rgba(#000,.5);
+      height: 100vh;
+      width: 100vw;
+    }
+    
+    &__lists{
   
-  // &__lists{
-
-  //   @include media(u-l){
-  //     transform: translateY(-100%);
-  //     .is-open &{
-  //       position: absolute;
-  //       top: 60px;
-  //       left: 0;
-  //       width: 100%;
-  //       background-color: red;
-  //       transform: translateY(0%);
-  //     }
-  //   }
-
-  // }
-
-}
-
-.m-gnavi{
-
-  $root: &;
+      transform: translateY(-100%);
+      position: absolute;
+      top: 60px;
+      left: 0;
+      width: 100%;
+      background-color: red;
+      transition: transform .3s;
+      z-index: -1;
   
-  &__lists{
-
-    transform: translateY(-100%);
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: red;
-    transition: transform .3s;
-    z-index: -1;
-
-    #{$root}.is-open &{ 
-
-      @include media(u-l){
+      #{$root}.is-open &{ 
+  
         transform: translateY(0%);
+
       }
     }
+    
   }
-  
 }
+
