@@ -3,4 +3,12 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 8px;
+
+  .c-skill{
+
+    width: calc(50% - 4px);
+    text-align: center;
+    margin-top: 20px;
+  
+  }
 }

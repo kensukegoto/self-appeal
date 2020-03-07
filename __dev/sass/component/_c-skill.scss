@@ -1,9 +1,5 @@
 .c-skill{
-
-  width: calc(50% - 4px);
-  text-align: center;
-  margin-top: 20px;
-
+  
   &__num{
     @include number;
     margin: 0 auto;
