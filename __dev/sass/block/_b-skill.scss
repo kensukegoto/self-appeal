@@ -1,6 +1,7 @@
 .b-skill{
   background-color: color(main);
   padding-top: 24px;
+  padding-bottom: 48px;
 
   @include media(l){
     padding-top: 32px;

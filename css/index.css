@@ -145,6 +145,7 @@ body {
 .b-skill {
   background-color: #f6f6f6;
   padding-top: 24px;
+  padding-bottom: 48px;
 }
 .b-skill__inner {
   margin-top: 20px;
