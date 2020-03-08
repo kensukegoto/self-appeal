@@ -1,0 +1,23 @@
+.c-blog-more{
+  margin-top: 24px;
+  text-align: right;
+  padding: 0 16px;
+  &__inner{
+    display: inline-block;
+  }
+  a{
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    &::before{
+      content: "";
+      display: block;
+      height: 2px;
+      width: 48px;
+      background-color: color(bk0);
+      margin-right: 16px;
+    }
+  }
+
+}

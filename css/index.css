@@ -422,6 +422,29 @@ body {
   display: block;
   font-size: 1.4rem;
 }
+
+.c-blog-more {
+  margin-top: 24px;
+  text-align: right;
+  padding: 0 16px;
+}
+.c-blog-more__inner {
+  display: inline-block;
+}
+.c-blog-more a {
+  display: flex;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.c-blog-more a::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 48px;
+  background-color: #000;
+  margin-right: 16px;
+}
 .m-skills {
   display: flex;
   flex-wrap: wrap;
@@ -1474,10 +1497,11 @@ body {
     margin-top: 0;
   }
   .c-blog {
-    width: calc(50% - (16px / 2));
-  }
-  .c-blog:nth-child(-n+2) {
     margin-top: 0;
+    width: calc(33% - (16px * 2) / 3 );
+  }
+  .c-blog::last-child {
+    width: calc(34% - (16px * 2) / 3 );
   }
   .m-skills .c-skill {
     width: calc(33% - (16px * 2)/3);
@@ -2639,11 +2663,11 @@ body {
     margin-top: 16px;
   }
   .c-blog {
-    width: calc(33% - (16px * 2) / 3 );
-    margin-top: 0;
+    padding-top: 16px;
+    padding-left: 16px;
   }
-  .c-blog::last-child {
-    width: calc(34% - (16px * 2) / 3 );
+  .c-blog__img::before {
+    width: calc(100% - 16px);
   }
   .c-blog__txt {
     padding: 16px;
