@@ -5,7 +5,7 @@ Last Updated: 2010-09-17
 Author: Richard Clark - http://richclarkdesign.com 
 Twitter: @rich_clark
 */
-@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Martel:800|Noto+Sans+JP:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cabin:400,700|Martel:800|Noto+Sans+JP:400,700|Inconsolata&display=swap");
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -409,14 +409,18 @@ body {
 .c-blog__txt {
   background-color: #fff;
   padding: 8px;
+  padding-bottom: 16px;
 }
 .c-blog__title {
   line-height: 1.75;
+  font-weight: bold;
 }
 .c-blog__date {
+  font-family: "Inconsolata", monospace;
   padding-top: 4px;
   text-align: right;
   display: block;
+  font-size: 1.4rem;
 }
 .m-skills {
   display: flex;
@@ -432,6 +436,7 @@ body {
 .m-blogs {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .u-mt0 {
@@ -1469,7 +1474,10 @@ body {
     margin-top: 0;
   }
   .c-blog {
-    width: 50%;
+    width: calc(50% - (16px / 2));
+  }
+  .c-blog:nth-child(-n+2) {
+    margin-top: 0;
   }
   .m-skills .c-skill {
     width: calc(33% - (16px * 2)/3);
@@ -2631,7 +2639,20 @@ body {
     margin-top: 16px;
   }
   .c-blog {
-    width: 33%;
+    width: calc(33% - (16px * 2) / 3 );
+    margin-top: 0;
+  }
+  .c-blog::last-child {
+    width: calc(34% - (16px * 2) / 3 );
+  }
+  .c-blog__txt {
+    padding: 16px;
+  }
+  .c-blog__title {
+    font-size: 1.8rem;
+  }
+  .c-blog__date {
+    padding-top: 8px;
   }
   .m-gnavi__lists__content {
     display: flex;

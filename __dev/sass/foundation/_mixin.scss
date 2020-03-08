@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Martel:800|Noto+Sans+JP:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700|Martel:800|Noto+Sans+JP:400,700|Inconsolata&display=swap');
+
 
 @mixin english{
   font-family: 'Cabin', sans-serif;
 }
 @mixin number{
   font-family: 'Martel', serif;
+}
+@mixin date {
+  font-family: 'Inconsolata', monospace;
 }
 
 $breakpoints: (

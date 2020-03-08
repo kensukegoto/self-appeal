@@ -10,11 +10,19 @@
   }
 
   @include media(m){
-    width: 50%;
+    width: calc(50% - (16px / 2));
+    &:nth-child(-n + 2){
+      margin-top: 0;
+    }
   }
   @include media(l){
-    width: 33%;
+    width: calc(33% - (16px * 2) / 3 );
+    &::last-child{
+      width: calc(34% - (16px * 2) / 3 );
+    }
+    margin-top: 0;
   }
+
   &__img{
     &::before{
       content: "";
@@ -33,14 +41,27 @@
   &__txt{
     background-color: color(wh);
     padding: 8px;
+    padding-bottom: 16px;
+    @include media(l){
+      padding: 16px;
+    }
   }
   &__title{
     line-height: 1.75;
+    font-weight: bold;
+    @include media(l){
+      font-size: 1.8rem;
+    }
   }
   &__date{
+    @include date;
     padding-top: 4px;
     text-align: right;
     display: block;
+    font-size: 1.4rem;
+    @include media(l){
+      padding-top: 8px;
+    }
   }
 
 }
