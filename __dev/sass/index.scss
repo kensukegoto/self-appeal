@@ -9,6 +9,7 @@
 @import "block/b-mv";
 @import "block/b-skill";
 @import "block/b-profile";
+@import "block/b-blog";
 
 // Element 
 // これ以上分解不可
@@ -26,6 +27,7 @@
 @import "component/c-gear";
 @import "component/c-profile-img";
 @import "component/c-profile-list";
+@import "component/c-blog";
 
 // Module 
 // ComponentやElementの集まり
@@ -33,6 +35,7 @@
 @import "module/m-gnavi--pc.scss";
 @import "module/m-skills.scss";
 @import "module/m-profile.scss";
+@import "module/m-blogs.scss";
 
 // utility
 @import "utility/u-fontsize";
