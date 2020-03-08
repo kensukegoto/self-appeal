@@ -182,6 +182,21 @@ body {
   margin-left: 16px;
 }
 
+.b-contact {
+  padding-top: 24px;
+  padding-bottom: 48px;
+}
+.b-contact__inner {
+  display: table;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+}
+.b-contact__inner p {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .c-humburger {
   position: relative;
   display: block;
@@ -2593,6 +2608,9 @@ body {
     margin-top: 32px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .b-contact {
+    padding-top: 32px;
   }
   .c-humburger {
     display: none !important;
