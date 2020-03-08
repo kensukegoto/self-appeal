@@ -2711,6 +2711,12 @@ body {
   .c-blog__date {
     padding-top: 8px;
   }
+  .c-blog-more {
+    width: 960px;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .m-gnavi__lists__content {
     display: flex;
   }
