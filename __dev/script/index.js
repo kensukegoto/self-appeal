@@ -1,4 +1,6 @@
-// ハンバーガーメニュー
+/**
+ * ハンバーガーメニュー
+ */
 (()=>{
 
   const gnavi = document.querySelector(".m-gnavi");
@@ -7,13 +9,29 @@
     gnavi.classList.toggle("is-open");
   });
 
+  /**
+  * jQueryを使わないページ内スクロール
+  * https://www.to-r.net/media/smooth_scrolling_2019/
+  */
   const items = gnavi.querySelectorAll(".item");
   for(let item of items){
     item.addEventListener("click",function(e){
       e.preventDefault();
       gnavi.classList.remove("is-open");
-      const target = this.querySelector("a").getAttribute("href");
-      console.log(target)
+      let target = this.querySelector("a").getAttribute("href");
+      // 画面上部から要素までの距離
+      const rectTop = document.querySelector(target).getBoundingClientRect().top;
+      // 現在のスクロール距離
+      const offsetTop = window.pageYOffset
+      // スクロール位置に持たせるバッファ
+      const buffer = 80
+      const top = rectTop + offsetTop - buffer
+      
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      });
+      
     });
   }
 })();
