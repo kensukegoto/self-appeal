@@ -41,3 +41,9 @@
     });
   }
 })();
+
+import wordcloud from "./wordcloud";
+wordcloud({
+  selector: ".c-cloud",
+  csv: "./data/word.csv"
+})
