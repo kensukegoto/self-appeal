@@ -16,12 +16,12 @@
         <div class="m-gnavi__lists">
           <nav class="m-gnavi__lists__inner">
             <ul class="m-gnavi__lists__content">
-              <li class="item is-active"><a href="">トップ</a></li>
-              <li class="item"><a href="">何が出来るの？</a></li>
-              <li class="item"><a href="">どんな人？</a></li>
-              <li class="item"><a href="">最近の活動</a></li>
-              <li class="item"><a href="">お問い合わせ</a></li>
-            </ul>
+              <li class="item is-active"><a href="#top">トップ</a></li>
+              <li class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
+              <li class="item" data-target="profile"><a href="#profile">どんな人？</a></li>
+              <li class="item" data-target="activity"><a href="#activity">最近の活動</a></li>
+              <li class="item" data-target="contact"><a href="#contact">お問い合わせ</a></li>
+            </ul> 
           </nav>
         </div>
       </nav>
@@ -164,15 +164,6 @@
   <footer class="b-footer">
     <p>©️KENSUKE GOTO</p>
   </footer>
-  <script>
-
-    setTimeout(()=>{
-      return;
-      const btn = document.querySelector(".c-humburger");
-      const modal = document.querySelector(".m-gnavi__lists");
-      btn.classList.add("on-modal");
-      modal.classList.add("on-modal");
-    },1000)
-  </script>
+  <script src="./js/index.bundle.js"></script>
 </body>
 </html>
