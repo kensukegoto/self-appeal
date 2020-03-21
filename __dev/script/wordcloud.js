@@ -19,8 +19,17 @@ export default async function (c){
       t: 10,b: 10
     };
 
+  const shuffle = ([...array]) => {
+    for (let i = array.length - 1; i >= 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
   
-  const data = await d3.csv(csv);
+  let data = await d3.csv(csv);
+  data = shuffle(data).filter((e,i) => i < 25);
+
   const color = d3.scaleOrdinal(d3.schemePaired);
 
   const fontSizeSet = [
