@@ -19,13 +19,19 @@
       e.preventDefault();
       gnavi.classList.remove("is-open");
       let target = this.querySelector("a").getAttribute("href");
-      // 画面上部から要素までの距離
-      const rectTop = document.querySelector(target).getBoundingClientRect().top;
-      // 現在のスクロール距離
-      const offsetTop = window.pageYOffset
-      // スクロール位置に持たせるバッファ
-      const buffer = 80
-      const top = rectTop + offsetTop - buffer
+
+      let top = 0;
+      
+      if(target !== "#top"){
+        // 画面上部から要素までの距離
+        const rectTop = document.querySelector(target).getBoundingClientRect().top;
+        // 現在のスクロール距離
+        const offsetTop = window.pageYOffset
+        // スクロール位置に持たせるバッファ
+        const buffer = (window.innerWidth > 959) ? 80 : 60;
+        top = rectTop + offsetTop - buffer
+      }
+
       
       window.scrollTo({
         top,
