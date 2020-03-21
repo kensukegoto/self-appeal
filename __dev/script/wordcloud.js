@@ -33,7 +33,7 @@ export default async function (c){
   const color = d3.scaleOrdinal(d3.schemePaired);
 
   const fontSizeSet = [
-    [20,40],
+    [20,50],
     [60,120]
   ];
 
