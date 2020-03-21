@@ -34,7 +34,7 @@ export default async function (c){
 
   const fontSizeSet = [
     [20,40],
-    [50,100]
+    [60,120]
   ];
 
   let fontSize = d3.scalePow()
