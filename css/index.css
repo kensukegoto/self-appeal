@@ -2634,6 +2634,7 @@ body {
     left: 0;
     padding: 0 24px 24px 0;
     margin-left: 5px;
+    background-color: transparent;
   }
   .c-copy p {
     font-size: 4rem;
