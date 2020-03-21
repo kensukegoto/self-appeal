@@ -36,13 +36,14 @@ export default async function (c){
   let svg = d3.select(selector)
     .append("svg")
     .attr("width",w)
-    .attr("height",h - m.t - m.b)
+    .attr("height",h)
 
   let wc = svg
     .append("g")
     .attr("class","wordcloud")
     .attr("transform", 
-    `translate(${w / 2},${h / 2})`);
+    `translate(${w / 2},${h / 2 + m.t})`);
+
 
   let cloud = d3.layout.cloud()
     .size([w,h - m.t - m.b])
@@ -78,11 +79,11 @@ export default async function (c){
 
     svg
       .attr("width",w)
-      .attr("height",h - m.t - m.b)
+      .attr("height",h)
 
     wc
     .attr("transform", 
-    `translate(${w / 2},${h / 2})`);
+    `translate(${w / 2},${h / 2 + m.t})`);
 
     cloud
       .size([w,h - m.t - m.b])
@@ -129,9 +130,11 @@ export default async function (c){
         })
         .text( d => d.text)
 
+        
+
         // アニメーション
-        TweenMax.from( `.g${i + 1}` , [2,1,2][i] , {
-          y : [-10,5,10][i], // CSSプロパティ
+        TweenMax.from( `.g${i + 1}` , [3,1,2][i] , {
+          y : (w > 959) ? [-10,5,10][i] : [-20,10,15][i], // CSSプロパティ
           repeat: -1,
           yoyo: true,
           ease : "none", // イージング
