@@ -10,13 +10,22 @@ export default async function (c){
 
   let w = document.querySelector(selector).clientWidth;
   let h = document.querySelector(selector).clientHeight;
+
+  let m = (w > 959) ? 
+    {
+      t: 20,b: 20
+    }:
+    {
+      t: 10,b: 10
+    };
+
   
   const data = await d3.csv(csv);
   const color = d3.scaleOrdinal(d3.schemePaired);
 
   const fontSizeSet = [
     [20,40],
-    [40,90]
+    [50,100]
   ];
 
   let fontSize = d3.scalePow()
@@ -27,7 +36,7 @@ export default async function (c){
   let svg = d3.select(selector)
     .append("svg")
     .attr("width",w)
-    .attr("height",h)
+    .attr("height",h - m.t - m.b)
 
   let wc = svg
     .append("g")
@@ -36,7 +45,7 @@ export default async function (c){
     `translate(${w / 2},${h / 2})`);
 
   let cloud = d3.layout.cloud()
-    .size([w,h])
+    .size([w,h - m.t - m.b])
 
   cloud.words(data)
     .rotate(0)
@@ -51,8 +60,17 @@ export default async function (c){
 
   function resize (){
 
-    w = document.querySelector("figure").clientWidth;
-    h = document.querySelector("figure").clientHeight;
+    w = document.querySelector(selector).clientWidth;
+    h = document.querySelector(selector).clientHeight;
+
+    m = (w > 959) ? 
+      {
+        t: 20,b: 20
+      }:
+      {
+        t: 10,b: 10
+      };
+
 
     fontSize = d3.scalePow()
       .range(fontSizeSet[(w > 959) ? 1 : 0]) 
@@ -60,14 +78,14 @@ export default async function (c){
 
     svg
       .attr("width",w)
-      .attr("height",h)
+      .attr("height",h - m.t - m.b)
 
     wc
     .attr("transform", 
     `translate(${w / 2},${h / 2})`);
 
     cloud
-      .size([w,h])
+      .size([w,h - m.t - m.b])
       .words(data)
       .rotate(0)
       .fontSize(()=> fontSize(Math.random()))
