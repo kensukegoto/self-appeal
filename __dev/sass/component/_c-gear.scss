@@ -1,16 +1,70 @@
 .c-gear{
   position: absolute;
   bottom: 20px;
-  right: 8px;
+  left:50%;
   z-index: -1;
-  width: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+
   @include media(m){
     width: 33%;
-    bottom: 28px;
+    right: 8px;
+    left: auto;
+    transform: none;
+  }
+  @include media(l){
+    width: 25%;
     right: 16px;
+    bottom: 24px;
+  }
+
+  &::after{
+    content: "";
+    display: block;
+    padding-bottom: 110.0917%;
   }
 
   img{
     width: 100%;
   }
+
+  &--1{
+    position: absolute;
+    animation-name: rotate-reverse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &--2{
+    position: absolute;
+    animation-name: rotate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &--3{
+    position: absolute;
+    animation-name: rotate-reverse;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+
+@keyframes rotate{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate-reverse{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
 }

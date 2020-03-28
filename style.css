@@ -371,14 +371,86 @@ body {
 .c-gear {
   position: absolute;
   bottom: 20px;
-  right: 8px;
+  left: 50%;
   z-index: -1;
-  width: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.c-gear::after {
+  content: "";
+  display: block;
+  padding-bottom: 110.0917%;
 }
 .c-gear img {
   width: 100%;
 }
+.c-gear--1 {
+  position: absolute;
+  -webkit-animation-name: rotate-reverse;
+          animation-name: rotate-reverse;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.c-gear--2 {
+  position: absolute;
+  -webkit-animation-name: rotate;
+          animation-name: rotate;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.c-gear--3 {
+  position: absolute;
+  -webkit-animation-name: rotate-reverse;
+          animation-name: rotate-reverse;
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
 
+@-webkit-keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
 .c-profile-img {
   padding-top: 8px;
   padding-left: 8px;
@@ -1523,8 +1595,9 @@ body {
   }
   .c-gear {
     width: 33%;
-    bottom: 28px;
-    right: 16px;
+    right: 8px;
+    left: auto;
+    transform: none;
   }
   .c-profile-list {
     margin-top: 0;
@@ -2683,6 +2756,11 @@ body {
   .c-skill__txt span {
     margin-top: 16px;
     font-size: 1.6rem;
+  }
+  .c-gear {
+    width: 25%;
+    right: 16px;
+    bottom: 24px;
   }
   .c-profile-img {
     padding-top: 16px;

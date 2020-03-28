@@ -56,16 +56,18 @@
               <span>を活用し定費用で負荷に強いサービスを作成する</span>
             </p>
           </li>
-          <li class="c-skill">
+          <!-- <li class="c-skill">
             <p class="c-skill__num">7</p>
             <p class="c-skill__txt">
               <b>Linux</b>
               <span>上でWEBサイトをアップロード・公開するための環境を作成する</span>
             </p>
-          </li>
+          </li> -->
         </ul>
         <figure class="c-gear">
-          <img src="<?php echo get_template_directory_uri(); ?>/image/c-gear.svg" alt="">
+          <img class="c-gear--1" src="<?php echo get_template_directory_uri(); ?>/image/c-gear--1.svg" alt="">
+          <img class="c-gear--2" src="<?php echo get_template_directory_uri(); ?>/image/c-gear--2.svg" alt="">
+          <img class="c-gear--3" src="<?php echo get_template_directory_uri(); ?>/image/c-gear--3.svg" alt="">
         </figure>
       </div>
     </section>
