@@ -15,42 +15,36 @@
       <div class="b-skill__inner">
         <ul class="m-skills">
           <li class="c-skill">
-            <p class="c-skill__num">1</p>
             <p class="c-skill__txt">
               <b>HTML•SCSS</b>
               <span>を使いウェブサイトを作成する</span>
             </p>
           </li>
           <li class="c-skill">
-            <p class="c-skill__num">2</p>
             <p class="c-skill__txt">
               <b>JavaScript</b>
               <span>を使いサイトに動きを付ける</span>
             </p>
           </li>
           <li class="c-skill">
-            <p class="c-skill__num">3</p>
             <p class="c-skill__txt">
               <b>WordPress</b>
               <span>をでブログ付きのウェブサイト作成する</span>
             </p>
           </li>
           <li class="c-skill">
-            <p class="c-skill__num">4</p>
             <p class="c-skill__txt">
               <b>Node.js</b>
               <span>を使い各種データベースと連携するシステムを作成する</span>
             </p>
           </li>
           <li class="c-skill">
-            <p class="c-skill__num">5</p>
             <p class="c-skill__txt">
               <b>PHP</b>
               <span>を使いGoogleスプレッドシートと連携するようなアプリを作成する</span>
             </p>
           </li>
           <li class="c-skill">
-            <p class="c-skill__num">6</p>
             <p class="c-skill__txt">
               <b>AWS</b>
               <span>を活用し定費用で負荷に強いサービスを作成する</span>

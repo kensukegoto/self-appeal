@@ -342,14 +342,16 @@ body {
   font-size: 2.4rem;
 }
 
-.c-skill__num {
-  font-family: "Martel", serif;
+.c-skill::before {
+  content: "";
   margin: 0 auto;
-  font-size: 1.8rem;
-  font-style: italic;
   width: 36px;
   height: 36px;
   display: flex;
+  background-image: url(./image/c-skill__icon.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: #f9f038;
   border-radius: 50%;
   align-items: center;
@@ -2742,8 +2744,7 @@ body {
     margin-top: 16px;
     font-size: 4rem;
   }
-  .c-skill__num {
-    font-size: 2.8rem;
+  .c-skill::before {
     width: 40px;
     height: 40px;
   }
