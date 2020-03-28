@@ -372,11 +372,11 @@ body {
 
 .c-gear {
   position: absolute;
-  bottom: 20px;
-  left: 50%;
   z-index: -1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
-  transform: translateY(-50%);
 }
 .c-gear::after {
   content: "";
@@ -1596,10 +1596,7 @@ body {
     right: 10%;
   }
   .c-gear {
-    width: 33%;
-    right: 8px;
-    left: auto;
-    transform: none;
+    width: 25%;
   }
   .c-profile-list {
     margin-top: 0;
@@ -2682,7 +2679,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 0 16px;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
   }
   .b-profile {
     padding-top: 32px;
@@ -2759,9 +2756,7 @@ body {
     font-size: 1.6rem;
   }
   .c-gear {
-    width: 25%;
-    right: 16px;
-    bottom: 24px;
+    width: 280px;
   }
   .c-profile-img {
     padding-top: 16px;
@@ -2837,7 +2832,7 @@ body {
     background-color: #cc0000;
   }
   .m-skills .c-skill {
-    margin-top: 24px;
+    margin-top: 32px;
   }
   .m-profile {
     width: 960px;

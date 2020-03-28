@@ -1,21 +1,18 @@
 .c-gear{
   position: absolute;
-  bottom: 20px;
-  left:50%;
   z-index: -1;
+  left:50%;
+  top: 50%;
+  transform: translate(-50%,-50%);  
   width: 100%;
-  transform: translateY(-50%);
 
   @include media(m){
-    width: 33%;
-    right: 8px;
-    left: auto;
-    transform: none;
+    width: 25%;
+
   }
   @include media(l){
-    width: 25%;
-    right: 16px;
-    bottom: 24px;
+    width: 280px;
+
   }
 
   &::after{
