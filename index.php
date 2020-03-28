@@ -1,38 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="./css/index.css">
-</head>
-<body>
-  <header class="b-header">
-    <div class="b-header__inner">
-      <h1 class="c-title"><b>後藤謙介</b><span>フロントもバックもクラウドも</span>
-      </h1>
-      <nav class="m-gnavi">
-        <a class="c-humburger"><span></span><span></span><span></span></a>
-        <div class="m-gnavi__lists">
-          <nav class="m-gnavi__lists__inner">
-            <ul class="m-gnavi__lists__content">
-              <li class="item is-active"><a href="#top">トップ</a></li>
-              <li class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
-              <li class="item" data-target="profile"><a href="#profile">プロフィール</a></li>
-              <li class="item" data-target="activity"><a href="#blog">最近の活動</a></li>
-              <li class="item" data-target="contact"><a href="#contact">お問い合わせ</a></li>
-            </ul> 
-          </nav>
-        </div>
-      </nav>
-    </div>
-  </header>
+<?php get_header(); ?>
   <main>
     <section class="b-mv">
       <div class="b-mv__inner">
         <div class="c-copy"><p><span>こうしたい<br>ああしたい<br>を実装します</span></p></div>
         <figure class="b-mv__cloud c-cloud"></figure>
-        <figure class="b-mv__man c-man"><img src="./image/b-mv__man.png" alt="後藤謙介の写真"></figure>
+        <figure class="b-mv__man c-man"><img src="<?php echo get_template_directory_uri(); ?>/image/b-mv__man.png" alt="後藤謙介の写真"></figure>
       </div>
     </section>
     <section class="b-skill" id="skill">
@@ -93,7 +65,7 @@
           </li>
         </ul>
         <figure class="c-gear">
-          <img src="./image/c-gear.svg" alt="">
+          <img src="<?php echo get_template_directory_uri(); ?>/image/c-gear.svg" alt="">
         </figure>
       </div>
     </section>
@@ -103,7 +75,7 @@
         <b>プロフィール</b>
       </h2>
       <div class="b-profile__inner m-profile">
-        <figure class="c-profile-img"><img src="./image/c-profile-img.jpg" alt=""></figure>
+        <figure class="c-profile-img"><img src="<?php echo get_template_directory_uri(); ?>/image/c-profile-img.jpg" alt=""></figure>
         <dl class="c-profile-list">
           <dt>出身</dt>
           <dd>茨城県土浦市（千葉県松戸市にも長く住んでいました）</dd>
@@ -127,21 +99,21 @@
       </h2>
       <ul class="b-blog__inner m-blogs">
         <li class="c-blog">
-          <figure class="c-blog__img"><img src="./image/c-blog--01.jpg" alt=""></figure>
+          <figure class="c-blog__img"><img src="<?php echo get_template_directory_uri(); ?>/image/c-blog--01.jpg" alt=""></figure>
           <div class="c-blog__txt">
             <p class="c-blog__title">「Hello,GitHub」に参加しました</p>
             <time class="c-blog__date">2020.3.8</time>
           </div>
         </li>
         <li class="c-blog">
-          <figure class="c-blog__img"><img src="./image/c-blog--02.jpg" alt=""></figure>
+          <figure class="c-blog__img"><img src="<?php echo get_template_directory_uri(); ?>/image/c-blog--02.jpg" alt=""></figure>
           <div class="c-blog__txt">
             <p class="c-blog__title">「Hello,GitHub」に参加しました</p>
             <time class="c-blog__date">2020.3.8</time>
           </div>
         </li>
         <li class="c-blog">
-          <figure class="c-blog__img"><img src="./image/c-blog--03.jpg" alt=""></figure>
+          <figure class="c-blog__img"><img src="<?php echo get_template_directory_uri(); ?>/image/c-blog--03.jpg" alt=""></figure>
           <div class="c-blog__txt">
             <p class="c-blog__title">「Hello,GitHub」に参加しました</p>
             <time class="c-blog__date">2020.3.8</time>
@@ -162,12 +134,4 @@
       </div>
     </section>
   </main>
-  <footer class="b-footer">
-    <p>©️KENSUKE GOTO</p>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="./lib/d3cloud.js"></script>
-  <script src="./js/index.bundle.js"></script>
-</body>
-</html>
+<?php get_footer(); ?>

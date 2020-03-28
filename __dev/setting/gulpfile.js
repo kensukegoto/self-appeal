@@ -14,7 +14,7 @@ const webpackConfig = require("./webpack.config");
 
 const srcStyle = {
   in: "../sass/**/*.scss",
-  out: "../../css"
+  out: "../../"
 };
 const srcScript = {
   in: "../script/**/*.js",
