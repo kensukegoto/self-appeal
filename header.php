@@ -21,7 +21,7 @@
         <div class="m-gnavi__lists">
           <nav class="m-gnavi__lists__inner">
             <ul class="m-gnavi__lists__content">
-              <li class="item is-active"><a href="#top">トップ</a></li>
+              <li class="item"><a href="#top">トップ</a></li>
               <li class="item" data-target="skill"><a href="#skill">何が出来るの？</a></li>
               <li class="item" data-target="profile"><a href="#profile">プロフィール</a></li>
               <li class="item" data-target="activity"><a href="#blog">最近の活動</a></li>
