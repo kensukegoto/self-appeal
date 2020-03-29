@@ -47,7 +47,7 @@
           <li class="c-skill">
             <p class="c-skill__txt">
               <b>AWS</b>
-              <span>を活用し定費用で負荷に強いサービスを作成する</span>
+              <span>を活用し低費用で負荷に強いサービスを作成する</span>
             </p>
           </li>
           <!-- <li class="c-skill">
