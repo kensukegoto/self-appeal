@@ -9,8 +9,8 @@
   transform: translate(-50%,-50%);
   overflow: hidden;
   @include media(l){
-    left: 300px;
-    transform: translateY(-50%);
+    // left: 300px;
+    // transform: translateY(-50%);
   }
   img{
     width: 100%;

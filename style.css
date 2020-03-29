@@ -2730,10 +2730,6 @@ body {
     height: 560px;
     right: 0;
   }
-  .c-cloud {
-    left: 300px;
-    transform: translateY(-50%);
-  }
   .c-heading span {
     font-size: 1.6rem;
   }
