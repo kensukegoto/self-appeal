@@ -12,7 +12,9 @@
 <body>
   <header class="b-header">
     <div class="b-header__inner">
-      <h1 class="c-title"><b>後藤謙介</b><span>フロントもバックもクラウドも</span>
+      <h1 class="c-title">
+      <b>後藤謙介</b>
+      <span>情熱系WEBエンジニア</span>
       </h1>
       <nav class="m-gnavi">
         <a class="c-humburger"><span></span><span></span><span></span></a>
