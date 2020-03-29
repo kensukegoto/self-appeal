@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KENSUKE GOTO</title>
+  <meta property="og:title" content="WEBエンジニア・後藤謙介のホームページ" />
+  <meta property="og:url" content="https://www.kensukegoto.com/" />
+  <meta property="og:description" content="ああしたい・こうしたいを実装します" />
+  <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/image/og--kensukegoto.jpg" />
   <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/image/favicon.ico">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <script>
